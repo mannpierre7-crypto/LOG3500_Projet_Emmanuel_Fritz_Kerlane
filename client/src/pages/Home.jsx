@@ -12,18 +12,16 @@ function Home() {
         LOG3500 Projet_Emmanuel_Nestant_Fritz_
       </h2>
 
-
       <p>
         Projet réalisé par l'équipe :
       </p>
 
-
       <p>
-        Rachel ST JEAN - React
+        Emmanuel Pierre - Développeur React
         <br/>
-        Kervins Lucien HERIVEAUX - HTML/CSS
+        Nestant Kerlane - HTML/CSS
         <br/>
-        Djelissa CESAR - Base de données
+        Jean-Fritz Celestin - Base de données
       </p>
 
     </section>

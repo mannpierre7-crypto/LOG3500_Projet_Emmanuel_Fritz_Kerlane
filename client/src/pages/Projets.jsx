@@ -1,104 +1,89 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
 import ProjectCard from "../components/ProjectCard";
 
 
-function Projets(){
+function Projets() {
+
+  const [projets, setProjets] = useState([]);
+
+  const [loading, setLoading] = useState(true);
 
 
-const [projets,setProjets]=useState([]);
+  useEffect(() => {
 
-const [loading,setLoading]=useState(true);
+    fetch("https://api.github.com/users/mannpierre7-crypto/repos")
 
+      .then(response => response.json())
 
+      .then(data => {
 
-useEffect(()=>{
+        setProjets(data);
 
+        setLoading(false);
 
-fetch("https://api.github.com/users/kev474/repos")
+      })
 
+      .catch(error => {
 
-.then(response=>response.json())
+        console.log(error);
 
+        setLoading(false);
 
-.then(data=>{
-
-setProjets(data);
-
-setLoading(false);
-
-})
-
-
-.catch(error=>{
-
-console.log(error);
-
-setLoading(false);
-
-});
+      });
 
 
-},[]);
+  }, []);
 
 
+  return (
 
-return(
+    <section>
 
-<section>
-
-
-<h1>
-Nos projets GitHub
-</h1>
+      <h1>
+        Nos projets GitHub
+      </h1>
 
 
-{
+      {
 
-loading ?
+        loading ?
 
-<p>
-Chargement...
-</p>
-
-
-:
+        <p>
+          Chargement...
+        </p>
 
 
-<div>
-
-{
-
-projets.map(projet=>(
+        :
 
 
-<ProjectCard
+        <div>
 
-key={projet.id}
+          {
 
-projet={projet}
+            projets.map(projet => (
 
-/>
+              <ProjectCard
 
+                key={projet.id}
 
-))
+                projet={projet}
 
+              />
 
-}
+            ))
 
-
-</div>
-
-
-}
+          }
 
 
+        </div>
 
-</section>
+      }
 
 
-);
+    </section>
 
+  );
 
 }
 
