@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio Professionnel Dynamique - LOG3500</title>
+
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Portfolio Professionnel Dynamique</h1>
+
+    <button
+        id="themeButton"
+        type="button"
+        aria-label="Changer le thème sombre ou clair">
+        Mode sombre
+    </button>
+
+    <nav aria-label="Navigation principale">
+
+        <ul>
+
+            <li><a href="#accueil">Accueil</a></li>
+
+            <li><a href="#equipe">Équipe</a></li>
+
+            <li><a href="#projets">Projets</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+    <section id="accueil">
+
+        <h2>Bienvenue sur notre portfolio</h2>
+
+        <p>
+            Nous sommes une équipe d'étudiants du cours LOG3500.
+            Ce portfolio présente nos compétences, nos projets et nos réalisations.
+        </p>
+
+    </section>
+
+    <section id="equipe">
+
+        <h2>Notre équipe</h2>
+
+        <div class="team-container">
+
+            <article class="card">
+
+                <img
+                    src="images/emmanuel.jpg"
+                    alt="Photo de Emmanuel Pierre">
+
+                <h3>Emmanuel Pierre</h3>
+
+                <h4>Développeur Full Stack</h4>
+
+                <p>
+                    Développement frontend et intégration utilisateur.
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <img
+                    src="images/kerlane.jpg"
+                    alt="Photo de Nestant Kerlane">
+
+                <h3>Nestant Kerlane</h3>
+
+                <h4>Designer Web</h4>
+
+                <p>
+                    Création visuelle et expérience utilisateur.
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <img
+                    src="images/fritz.jpg"
+                    alt="Photo de Jean Fritz Celestin">
+
+                <h3>Jean Fritz Celestin</h3>
+
+                <h4>Développeur Backend</h4>
+
+                <p>
+                    API, serveur et gestion des données.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <section id="projets">
+
+        <h2>Nos projets</h2>
+
+        <div class="project-card">
+
+            <h3>Portfolio LOG3500</h3>
+
+            <p>
+                Application web professionnelle dynamique.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <form aria-label="Formulaire de contact">
+
+            <label for="name">Nom</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required>
+
+            <label for="email">Email</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required>
+
+            <label for="message">Message</label>
+
+            <textarea
+                id="message"
+                name="message"
+                required></textarea>
+
+            <button type="submit">
+                Envoyer
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>© 2026 Portfolio LOG3500</p>
+
+</footer>
+
+<!-- JavaScript -->
+<script src="js/theme.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+body{
+
+background:white;
+color:#222;
+transition:0.3s;
+
+}
+
+
+
+body.dark-mode{
+
+background:#121212;
+color:white;
+
+}
+
+
+
+body.dark-mode header{
+
+background:#1e1e1e;
+
+}
+
+
+
+body.dark-mode .card,
+body.dark-mode .project-card{
+
+background:#222;
+color:white;
+
+}
+
+
+
+body.dark-mode input,
+body.dark-mode textarea{
+
+background:#333;
+color:white;
+border:1px solid #777;
+
+}
+
+
+
+body.dark-mode footer{
+
+background:#1e1e1e;
+
+}
