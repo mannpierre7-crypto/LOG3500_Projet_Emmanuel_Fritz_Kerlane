@@ -1,0 +1,24 @@
+{
+  "name": "log3500-projet_emmanuel_nestant_fritz_",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mannpierre7-crypto/LOG3500_Projet_Emmanuel_Fritz_Kerlane.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mannpierre7-crypto/LOG3500_Projet_Emmanuel_Fritz_Kerlane/issues"
+  },
+  "homepage": "https://github.com/mannpierre7-crypto/LOG3500_Projet_Emmanuel_Fritz_Kerlane#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
