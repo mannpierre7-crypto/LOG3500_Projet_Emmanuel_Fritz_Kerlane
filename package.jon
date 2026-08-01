@@ -1,11 +1,60 @@
-{
-  "name": "log3500-portfolio",
-  "version": "1.0.0",
-  "scripts": {
-    "start": "node server.js",
-    "build": "cd client && npm run build"
-  },
-  "dependencies": {
-    "express": "^5.1.0"
-  }
-}
+const express = require("express");
+const path = require("path");
+const fs = require("fs");
+
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+
+app.use(express.static(path.join(__dirname, "client/dist")));
+
+app.post("/api/contact", (req, res) => {
+
+    const { name, email, message } = req.body;
+
+    if (!name || !email || !message) {
+        return res.status(400).json({
+            message: "Champs obligatoires"
+        });
+    }
+
+    const data = {
+        name,
+        email,
+        message,
+        date: new Date()
+    };
+
+    let messages = [];
+
+    if (fs.existsSync("messages.json")) {
+        messages = JSON.parse(
+            fs.readFileSync("messages.json")
+        );
+    }
+
+    messages.push(data);
+
+    fs.writeFileSync(
+        "messages.json",
+        JSON.stringify(messages, null, 2)
+    );
+
+    res.json({
+        message: "Message envoyé"
+    });
+});
+
+
+app.get("*", (req,res)=>{
+    res.sendFile(
+        path.join(__dirname,"client/dist/index.html")
+    );
+});
+
+
+app.listen(PORT, ()=>{
+    console.log("Serveur lancé sur le port " + PORT);
+});
