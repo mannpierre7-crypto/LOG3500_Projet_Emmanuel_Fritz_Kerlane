@@ -1,9 +1,11 @@
 {
   "name": "log3500-projet_emmanuel_nestant_fritz_",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Portfolio Professionnel Dynamique Full-Stack LOG3500",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "build": "cd client && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,13 +13,9 @@
     "url": "git+https://github.com/mannpierre7-crypto/LOG3500_Projet_Emmanuel_Fritz_Kerlane.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Emmanuel Pierre, Nestant Kerlane, Jean-Fritz Celestin",
   "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/mannpierre7-crypto/LOG3500_Projet_Emmanuel_Fritz_Kerlane/issues"
-  },
-  "homepage": "https://github.com/mannpierre7-crypto/LOG3500_Projet_Emmanuel_Fritz_Kerlane#readme",
   "dependencies": {
     "express": "^5.2.1"
   }
